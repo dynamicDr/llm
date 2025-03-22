@@ -14,3 +14,5 @@ docker run -it --gpus=all \
  gz02-artifact.srdcloud.cn/cd_framework23-cd_algorithm-release-docker-local/starlink_train/llamafactory-env:v1
 
 【模型在本机上的路径】为一个任意hugging face模型，路径内部应包括：config.json model-xxx.safetensors tokenizer.json generation_config.json  tokenizer_config.json等文件
+
+运行信息应该可以在【代码仓库的路径】/saves以及【代码仓库的路径】/output。
