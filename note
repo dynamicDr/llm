@@ -1,0 +1,16 @@
+代码仓库：
+https://github.com/dynamicDr/llm
+
+运行指令（使用你发的llamafactory-env.tar这个镜像）:
+docker run -it --gpus=all \
+    -v 【代码仓库的路径】:/app \
+    -v 【模型在本机上的路径】:/root/.cache/huggingface/tmp \
+    -v 【代码仓库的路径】/data:/app/data \
+    -v 【代码仓库的路径】/output:/app/output \
+    -p 7860:7860 \
+    -p 8000:8000 \
+    --shm-size 16G \
+    --name llamafactory \
+ gz02-artifact.srdcloud.cn/cd_framework23-cd_algorithm-release-docker-local/starlink_train/llamafactory-env:v1
+
+【模型在本机上的路径】为一个任意hugging face模型，路径内部应包括：config.json model-xxx.safetensors tokenizer.json generation_config.json  tokenizer_config.json等文件
